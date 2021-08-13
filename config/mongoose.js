@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-mongoose.connect('mongodb://localhost/todo_dev');
+mongoose.connect(process.env.DATABASE_URL);
 
 const db= mongoose.connection;
 db.on('error',console.error.bind(console,'error connecting'));
