@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 
 dotenv.config({path: './config.env'});
-var port_number = server.listen(process.env.PORT || 3000);
+const PORT = process.env.PORT;
 // setting database
 const db = require("./config/mongoose");
 const { port } = require("./config/mongoose");
@@ -26,6 +26,6 @@ app.use( function(req,res, next){
 
 app.use('/',require('./routes'));
 
-app.listen(port_number, () => {
+app.listen(PORT || 5000, () => {
   console.log('Server is running on '+  PORT);
 });
