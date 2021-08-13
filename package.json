@@ -4,6 +4,7 @@
   "description": "To-do List",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.11"
